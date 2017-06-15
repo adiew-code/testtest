@@ -1,0 +1,777 @@
+body {
+	background-color: #E7E7E4;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 0 80px 0;
+	margin: 10px auto;
+	text-align: center;
+}
+
+
+/* Checkboxes */
+
+.checkbox {
+	padding-left: 0;
+}
+
+.checkbox input[type=checkbox] {  
+    display: none;  
+} 
+
+.checkbox input[type=checkbox]:checked + label:before {  
+    color: #4d5056;
+}  
+
+.checkbox label:before {
+	font-family: 'FontAwesome';
+	content: "\F00C";
+	color: transparent;
+	font-size: 12px;  
+	padding: 1px;
+	width: 17px;
+	height: 17px;
+	margin-right: 10px;
+	background-color: #fff;
+	border: 1px solid #c2c6cb;
+	border-radius: 3px;
+	transition: border 0.2s linear 0s,color 0.2s linear 0s;
+}
+
+.checkbox.check-primary input[type=checkbox]:checked + label:before {  
+	border-color: #0090D9;
+	background-color: #0090D9;
+	color: #fff;
+}  
+
+.checkbox.check-danger input[type=checkbox]:checked + label:before {  
+	background-color: #F35958;
+	border: 1px solid #F35958;
+	color: #fff;
+}
+
+.checkbox.check-warning input[type=checkbox]:checked + label:before {  
+	background-color: #f0ad4e;
+	border: 1px solid #f0ad4e;
+	color: #fff;
+}
+
+.checkbox.check-success input[type=checkbox]:checked + label:before {  
+	background-color: #5CB85C;
+	border: 1px solid #5CB85C;
+	color: #fff;
+}
+
+.checkbox.check-default input[type=checkbox]:checked + label:before {  
+	background-color: #999999;
+	border: 1px solid #999999;
+	color: #fff;
+}
+
+
+/* Tables */
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+	height: 42px;
+	padding: 10px 12px;
+	vertical-align: middle;
+}
+
+th {
+	height: 39px;
+	vertical-align: middle !important;
+}
+
+.table > tbody > tr > td, .table > tfoot > tr > td {
+	border-top: 1px solid #E8EDF1;
+}
+
+.table>thead>tr>th {
+	border-bottom: none;
+}
+
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+	background-color: #E8EDF1;
+	transition: background-color 0.1s linear 0s;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.clickable.underline:hover {
+	text-decoration: underline;
+}
+
+td .label {
+	margin-right: 1px;
+}
+
+select {
+}
+
+td {
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+th:first-child {
+	text-align: left;
+}
+
+td.td-product, td.td-keyword, th.td-product, th.td-keyword {
+	width: auto;
+	text-align: left;
+}
+
+td.td-product {
+	padding-top: 14px !important;
+	vertical-align: top !important;
+}
+
+td.td-sales-rank {
+	width: 120px;
+}
+
+td.td-fav {
+	text-align: center;
+	width: 40px;
+}
+
+td.td-fav .glyphicon {
+	margin: 0;
+}
+
+td .glyphicon-star .fav-on, td .glyphicon-star .fav-off {
+	clear: both;
+	display: block;
+	margin: 0;	
+}
+
+span.glyphicon.glyphicon-star.fav-on {
+	color: #f39c12;
+}
+
+span.glyphicon.glyphicon-star.fav-off {
+	color: #eee;
+}
+
+span.glyphicon.glyphicon-star.fav-on:hover, span.glyphicon.glyphicon-star.fav-off:hover {
+	color: #f39c12;
+}
+
+td.td-chevron {
+	width: 30px;
+	padding: 14px 0 0 12px !important;
+	vertical-align: top !important;
+}
+
+td.td-ranking {
+	width: 240px;
+}
+
+td.td-action {
+	width: 170px;
+}
+
+.volume {
+	font-size: 10px;
+	color: #999;
+	margin-bottom: 0;
+    width: 100px;
+}
+
+.group {
+	float: left;
+	width: 50%;
+}
+
+.td-flag {
+	width: 10px;
+}
+
+p.asin, p.product_group {
+	font-size: 10px;
+	color: #999;
+	margin-top: 5px;
+}
+
+p[class^=product_name] {
+	margin: 10px 0 2px 0;
+}
+
+td.td-product:hover {
+	cursor: pointer;
+}
+
+table.table-main .glyphicon-chevron-right, table.table-main .glyphicon-chevron-down {
+	margin: 15px 10px 0 0;
+	padding: 0;
+	font-size: 10px;
+	width: 2%;
+}
+
+table.table-main>thead>tr>th {
+	background-color: #3E3F4D !important;
+	color: #fff !important;
+	height: 70px;
+}
+
+table.table-main>tbody>tr {
+	background-color: #fff;
+}
+
+table.table-main>tbody>tr>td {
+	height: 60px;
+}
+
+table.table-child {
+}
+
+table.table-child>thead>tr>th {
+	background-color: #F7F7F7 !important;
+	-webkit-box-shadow:inset 0 5px 3px -4px rgba(0,0,0,.5);
+	box-shadow:inset 0 5px 3px -4px rgba(0,0,0,.4);
+	/*color: #fff !important;*/
+}
+
+table.table-child>tbody>tr:last-child>td {
+	-webkit-box-shadow:inset 0 -5px 3px -4px rgba(0,0,0,.5);
+	box-shadow:inset 0 -5px 3px -4px rgba(0,0,0,.5);
+}
+
+table.table-child>tbody>tr {
+	/*background-color: #E8EAF6;*/
+}
+
+.alert-suggestions {
+	background-color: #428bca;
+	border: none;
+	border-radius: 0;
+	color: #fff;	
+}
+
+/* Modals */
+
+.modal-content {
+	border-radius: 0;
+}
+
+/* Delete Modal */
+
+.delete-name {
+	color: #000;
+	font-weight: bold;
+	margin-top: 20px;	
+}
+
+/* Buttons */
+
+.btn-add-product, .btn-bulk-cancel {
+	margin: 10px 0 20px 0;	
+	float: right;
+}
+
+.btn-delete-product{
+     margin: -41px -152px 12px 665px !important;
+    float: left !important;
+}
+
+.btn-help {
+	color: #333;
+	background-color: #DDD;
+	margin: 10px 10px 20px 0;
+	float: right;
+}
+
+.btn-keyword-research, .btn-bulk-export, .btn-bulk-delete, .btn-bulk-refresh, .btn-bulk-request-hide, .btn-bulk-email-voucher {
+	margin: 10px 10px 20px 0;	
+	float: right;
+}
+
+.btn-show-all-keywords {
+	margin: 10px 10px 10px 20px;	
+	float: left;
+}
+
+.btn-hide-all-keywords {
+	margin: 10px 0 10px 0;	
+	float: left;
+}
+
+/* Selects */
+
+.tag-filter, .graph-history, .bulk-select, .inventory-history {
+	width: auto;
+	background-color: #fff !important;
+	margin: 10px 0 20px 0;
+	float: left;
+}
+
+/* dataTables */
+
+.dataTables_filter {
+	/*display: none !important;*/
+}
+
+.dataTables_filter input {
+	border: 1px solid #999;
+	padding: 5px 10px;
+}
+
+#table-users_filter.dataTables_filter {
+	display: block !important;
+}
+
+/* Nav */
+
+h1 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 70px;
+	margin: 0;
+}
+
+.nav-main {
+	background-color: #3E3F4D;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	height: 70px;
+}
+
+.nav-inner {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.nav-padding {
+	padding-top: 70px;
+}
+
+/* Form Controls */
+
+.form-control {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.form-control:focus {
+	border: 1px solid #3E3F4D;
+	box-shadow: none;
+}
+
+/* Alerts */
+
+.alerts {
+	width: 100%;
+	padding-top: 15px;
+	margin: 0 auto;
+	background-color: #fff;
+	display: none;
+	cursor: pointer;
+}
+
+/* Glyphicons */
+
+
+.glyphicon {
+	margin-left: 7px;
+	cursor: pointer;
+}
+
+.fa {
+	margin-left: 7px;
+	cursor: pointer;
+	position: relative;
+}
+
+button .glyphicon {
+	margin-left: 0;
+	margin-right: 7px;
+}
+
+table .glyphicon {
+	color: #999;
+}
+
+table .td-action .glyphicon:hover {
+	color: #000;
+}
+
+.account-icon, .reports-icon, .rankings-icon, .proxy-icon, .users-icon, .help-icon, .auto-suggest-icon, .sales-icon, .redirection-icon,.smasher-icon, .reviews-icon, .iq-icon, .review-trader-icon, .keyword-analyzer-icon, .reviewers-icon, .stumbleupon-icon {
+	float: right;
+	font-size: 18px;
+	color: #999;
+	margin-right: 10px;
+	line-height: 30px;
+	margin-top: 20px;
+}
+
+.nav-inner .active {
+	color: #fff;
+}
+
+.account-icon:hover, .reports-icon:hover, .rankings-icon:hover, .proxy-icon:hover, .users-icon:hover, .help-icon:hover, .auto-suggest-icon:hover, .sales-icon:hover, .redirection-icon:hover,.smasher-icon:hover, .reviews-icon:hover, .iq-icon:hover, .review-trader-icon:hover, .keyword-analyzer-icon:hover, .reviewers-icon:hover, .stumbleupon-icon:hover {
+	color: #fff;
+}
+
+/* Graph */
+
+.td-graph {
+	width: 200px;
+	height: 60px !important;
+	padding: 0 !important;
+}
+
+[id^=mini_graph_] {
+	width: 200px;
+	height: 80px;
+	top: -40px;
+}
+
+/* Suggestions */
+
+.suggestions-list {
+	text-align: left;
+	height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+.suggestions-heading {
+	height: 44px;
+	font-size: 16px;
+	font-weight: bold;
+}	
+
+textarea[name=seed] {
+	height: 355px;
+	margin-bottom: 10px;
+}
+
+textarea[name=keywords] {
+	height: 400px;
+	margin-bottom: 10px;
+}
+
+select[name=suggestion-product-id] {
+	margin-bottom: 10px;
+	background-color: #fff !important;	
+}
+
+/* Reports */
+
+
+.btn-new-report {
+	margin: 10px 0 20px 0;	
+	float: right;
+}
+
+#reportModal td, #reportModal th {
+	text-align: left;
+}
+
+#reportModal .checkbox {
+	width: 6px;
+}
+
+#reportModal tr.tr_active {
+	background-color: #e8e8e8 !important;
+}
+
+.datepicker.dropdown-menu, .datepicker.datepicker-dropdown.dropdown-menu {
+	z-index: 10000 !important;
+}
+
+.input-datepicker {
+	background-color: transparent !important;
+	cursor: pointer !important;
+}
+
+#reportModal .glyphicon-calendar, #artModal .glyphicon-calendar {
+	position: absolute;
+	right: 25px;
+	top: 11px;
+	cursor: pointer;
+}	
+
+.table-reports td, .table-reports th {
+	text-align: left;
+}
+
+.table-reports .td-action {
+	width: 120px !important;
+	text-align: center !important;
+}
+
+/* Videos */
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:70px;
+	height:0;
+	overflow:hidden;
+	-webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+	box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+
+/* Auto Suggest */
+
+
+.btn-new-auto-suggest {
+	margin: 10px 0 20px 0;	
+	float: right;
+}
+
+/* Redirection */
+
+td.td-clicks {
+	width: 100px;
+}
+
+td.td-keyword-count {
+	width: 200px;
+}
+
+table.redirection-edit-table td, table.redirection-edit-table th {
+	text-align: left;
+}
+
+table.redirection-edit-table tbody>tr>td:last-child {
+	padding: 10px 12px !important;
+}
+
+table.redirection-edit-table td div {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	line-height: 41px;
+	padding: 0 12px;
+}
+
+span.span-links {
+	color: #428bca;
+	cursor: pointer;
+}
+
+span.span-links:hover {
+	color: #2a6496;
+	text-decoration: underline;
+}
+
+/* Bulk Export */
+
+
+#bulkExportModal .glyphicon-calendar {
+	position: absolute;
+	right: 25px;
+	top: 11px;
+	cursor: pointer;
+}	
+
+/* Competition Modal */
+
+#competitionModal #competition-table td, #competitionModal #competition-table th {
+	text-align: left;
+}
+
+#competitionModal #competition-table .asin-colour {
+	display: inline-block; 
+	height: 14px; 
+	width: 14px; 
+	margin-right: 10px;
+	margin-top: 7px;
+}
+
+/* Review */
+
+table.table-reviews>tbody>tr>td {
+	padding: 25px 12px;
+	vertical-align: top;
+}
+
+table .td-review {
+	text-align: left;
+}
+
+table.table-reviews img {
+	max-height: 50px;
+}
+
+table.table-reviews .td-rating, table.table-reviews .td-date {
+	width: 100px;
+}
+
+table.table-reviews .td-action {
+	width: 100px;
+}
+
+.review-counter, .review-trader-counter, .confirmed-counter {
+	position: absolute;
+	top: -18px;
+	left: 14px;
+	background-color: #f35958;
+	border-radius: 9px;
+	height: 18px;
+	color: #fff;
+	font-size: 9px;
+	line-height: 17px;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 1px 6px 0 5px;
+}
+
+.review-counter-main, .review-trader-counter-main {
+	top: -7px;
+	left: 10px;
+	padding: 0 7px 0 5px;
+}
+
+/* IQ */
+
+.iq-details {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	min-height: 336px;
+	overflow: auto;
+	max-height: 500px;
+	text-align: left;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.iq-category {
+	display: none;
+}
+
+.iq-bullet-points ul {
+	padding-left: 18px;
+
+}
+
+.table-product-metrics tr>td:first-child {
+	text-align: left;
+}
+
+.table-iq td.td-product {
+	text-align: left;
+
+}
+
+.table-iq .td-action {
+	text-align: right;
+	padding-right: 20px;	
+}
+
+.table-iq .td-ticks {
+    width: 140px;
+    padding: 0 20px;
+    text-align: left;	
+}
+
+.table-iq .td-date {
+	width: 100px;
+}
+
+.table-iq .td-action {
+	width: 165px;
+}
+
+/* Review Request */
+
+span[id^=email_request_].fa {
+	margin-left: 8px;
+}
+
+table.table-review-trader tbody>tr>td {
+	padding-bottom: 22px;
+}
+
+table td.td-profile {
+	text-align: left;
+}
+
+table td.td-date {
+	width: 150px;
+}
+
+table .td-price {
+	width: 130px;
+	text-align: right;
+}
+
+table .td-about {
+	text-align: left;
+}
+
+table[id^=table_request_] .td-rating {
+	width: 100px;
+}
+
+table .td-keyword-count {
+	width: 150px;
+}
+
+/* Help Modal */
+
+#helpModal #help-links li {
+	margin-bottom: 10px;
+}
+/* set_vouchers_limit_day */
+.spinner input {
+	text-align: right;
+	width:60px !important;
+}
+.input-group-btn-vertical {
+	position: relative;
+	width: 18px;
+	float:left;
+	padding:0px !important;
+}
+.input-group-btn-vertical > .btn {
+	display: block;
+	float: none;
+	width: 100%;
+	max-width: 100%;
+	padding: 8px !important;
+	margin-left: -1px;
+	position: relative;
+	border-radius: 0;
+}
+.input-group-btn-vertical > .btn > .fa {
+	margin-left:0px !important;
+}
+.input-group-btn-vertical > .btn:first-child {
+	border-top-right-radius: 4px !important;
+}
+.input-group-btn-vertical > .btn:last-child {
+	margin-top: -2px;
+	border-bottom-right-radius: 4px !important;
+}
+.input-group-btn-vertical i{
+	position: absolute;
+	top: 0;
+	left: 4px;
+}
