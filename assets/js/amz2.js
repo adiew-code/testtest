@@ -926,9 +926,11 @@ function update_review_trader_count() {
 }
 
 function show_account(update_cc) {
-    $('#accountModal .modal-body').html('<i class="fa fa-spin fa-spinner"></i> Please Wait...');
+	
+    //$('#accountModal .modal-body').html('<i class="fa fa-spin fa-spinner"></i> Please Wait...');
     $('#accountModal').modal('show');
 
+	return;
     $.ajax({
         url: "account_modal.php",
         cache: false,
