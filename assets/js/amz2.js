@@ -675,18 +675,21 @@ function refresh_rank_table(message) {
         $(this).dataTable().fnDestroy();
     });
 
-    $('.content').html('<div class="bottom"><div style="padding-top:40px"><i class="fa fa-spin fa-spinner"></i> Please Wait...</div></div>');
+    $('.table-main').html('<div class="bottom"><div style="padding-top:40px"><i class="fa fa-spin fa-spinner"></i> Please Wait...</div></div>');
 
-    $('.nav-inner .fa').removeClass('active');
-    $('.nav-inner .rankings-icon').addClass('active');
+   // $('.nav-inner .fa').removeClass('active');
+   // $('.nav-inner .rankings-icon').addClass('active');
 
 
     $.ajax({
-        url: "main-table.php",
+        url: "api/main-table.jsp",
         method: 'GET',
         cache: false,
+		error:function(data){alert("请求失败"+data.status)},
         success: function(data) {
-            $('.container').html(data);
+			
+			alert("请求成功");
+            $('.table-main').html(data);
 
             if (data == '') {
                 $('#addProductsModal .close').hide();
