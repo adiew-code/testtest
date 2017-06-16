@@ -666,16 +666,16 @@ function refresh_table(message) {
 }
 
 function refresh_rank_table(message) {
-alert("dfsa");
+
     current_table = "rankings";
-
+	
     var tables = $.fn.dataTable.fnTables(true);
-
+	
     $(tables).each(function () {
         $(this).dataTable().fnDestroy();
     });
 
-    $('.container').html('<div class="bottom"><div style="padding-top:40px"><i class="fa fa-spin fa-spinner"></i> Please Wait...</div></div>');
+    $('.content').html('<div class="bottom"><div style="padding-top:40px"><i class="fa fa-spin fa-spinner"></i> Please Wait...</div></div>');
 
     $('.nav-inner .fa').removeClass('active');
     $('.nav-inner .rankings-icon').addClass('active');
@@ -1103,8 +1103,9 @@ function get_invoices() {
 
 
 function add_products(from_var) {
-    $('#addProductsModal textarea').val('');
-    $('#addProductsModal input[name=product_tags]').val('');
+
+    //$('#addProductsModal textarea').val('');
+    //$('#addProductsModal input[name=product_tags]').val('');
     // $('#addProductsModal .modal-add-products-button').attr('disabled', 'disabled');
     $('#addProductsModal input[name=from]').val(from_var);
     $('#addProductsModal').modal('show');

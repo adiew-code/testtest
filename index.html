@@ -65,7 +65,7 @@
 
                             <ul class="nav navbar-nav navbar-right pull-right">
                                 <li class="hidden-xs">
-                                    <a href="#" id="btn-addProduct" class="waves-effect"><button onclick="add_products()" type="button" class="btn btn-primary btn-rounded waves-effect waves-light m-b-5">+ Add Product</button></a>
+                                    <a href="#" id="btn-addProduct" class="waves-effect"><button onclick="add_products('')" type="button" class="btn btn-primary btn-rounded waves-effect waves-light m-b-5">+ Add Product</button></a>
                                 </li>
 								<li class="dropdown hidden-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle waves-effect" data-toggle="dropdown" aria-expanded="true">
@@ -215,6 +215,96 @@
                 <!-- Start content -->
                 <div class="content" style="background-color:yellow">
               
+			     <div class="modal fade" id="addProductsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modalName">
+                            Add Products
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Paste the product URL or type the product ASIN below to add new products
+                            to track. Tags are used to segment products into groups (optional).
+                        </p>
+                        <a href="https://www.amzsharp.com/blog/amz-tracker-quick-start-guide/"
+                        target="_blank" style="color: #FEA93A; font-weight: bold;">
+                            <i class="fa fa-video-camera" style="margin-right: 5px; line-height: 30px;">
+                            </i>
+                            Learn More
+                        </a>
+                        <form class="form-inline" role="form">
+                            <textarea class="form-group" rows="10" placeholder="URL or ASIN. Separate multiple products with a new line."
+                            name="asins" style="width: 100%; margin-top: 20px; padding: 10px;">
+                            </textarea>
+                            <div class="form-group" style="width: 100%; margin-top:10px">
+                                <select class="form-control" name="domain" style="margin-bottom: 10px;">
+                                    <option>
+                                        www.amazon.com
+                                    </option>
+                                    <option>
+                                        www.amazon.co.uk
+                                    </option>
+                                    <option>
+                                        www.amazon.com.br
+                                    </option>
+                                    <option>
+                                        www.amazon.ca
+                                    </option>
+                                    <option>
+                                        www.amazon.cn
+                                    </option>
+                                    <option>
+                                        www.amazon.fr
+                                    </option>
+                                    <option>
+                                        www.amazon.de
+                                    </option>
+                                    <option>
+                                        www.amazon.in
+                                    </option>
+                                    <option>
+                                        www.amazon.it
+                                    </option>
+                                    <option>
+                                        www.amazon.co.jp
+                                    </option>
+                                    <option>
+                                        www.amazon.es
+                                    </option>
+                                </select>
+                               
+                                <input type="checkbox" name="add_parent" id="add_parent" style="margin: 0 10px 0 20px;">
+                                <label class="has-tooltip" for="add_parent" title="Add the parent product and track all the child products. Untick this if you only want to track the child product.">
+                                    Track Parent Product and All Variations
+                                    <a href="http://help.amztracker.com/article/239-how-to-guide-products-with-variations-parent-child"
+                                    target="_blank" style="color: #FEA93A; font-weight: bold;">
+                                        <i class="fa fa-video-camera" style="margin-right: 5px; line-height: 30px;">
+                                        </i>
+                                        Learn More
+                                    </a>
+                                </label>
+                                <input type="hidden" name="from" value="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary modal-add-products-button">
+                            Add Products
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
                                
                 </div> <!-- content -->
                 <footer class="footer text-right">
@@ -339,9 +429,7 @@
 
         </div>
         <!-- END wrapper -->
-		<table>
-		
-		</table>
+
 		
     	<!-- jQuery  -->
 		<script src="assets/js/jquery.min.js"></script>
