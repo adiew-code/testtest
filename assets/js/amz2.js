@@ -687,10 +687,10 @@ function refresh_rank_table(message) {
         cache: false,
 		error:function(data){alert("请求失败"+data.status)},
         success: function(data) {
-			
-			alert("请求成功");
+		
             $('.table-main').html(data);
 
+			
             if (data == '') {
                 $('#addProductsModal .close').hide();
                 $('#addProductsModal .btn-default').hide();
@@ -758,7 +758,7 @@ function refresh_rank_table(message) {
                                     if (row[1] != "") display += row[1];
                                     else display += "<span class='glyphicon glyphicon-time' style='margin: 0 7px 0 0;'></span> <span style='color: #bbb'>Collecting data. Won't be long!</span>";
 
-                                    display += '</p><p class="asin"><img src="images/flags/' + row[11] + '.png" style="margin-right: 10px;">';
+                                    display += '</p><p class="asin"><img src="assets/images/flags/' + row[11] + '.png" style="margin-right: 10px;">';
 
                                     if (row[19] == 1) display += '<span style="font-weight: bold">';
                                     else display += '<span>';
@@ -2148,7 +2148,7 @@ function show_sales_table(message) {
                             "targets": [ 1 ],
                             "data": function (row, type, set, meta) {
                                 if (type === "display")  {
-                                    var display = '<p class="product_name_' + row[8] + '">' + row[1] + '</p><p class="asin"><img src="images/flags/' + row[12] + '.png" style="margin-right: 10px;">' + row[14];
+                                    var display = '<p class="product_name_' + row[8] + '">' + row[1] + '</p><p class="asin"><img src="assets/images/flags/' + row[12] + '.png" style="margin-right: 10px;">' + row[14];
 
                                     if (row[10] != "") display += " / " + row[10] + "</p>";
                                     if (row[17] != "") display += "<p class='asin'>Sales Rank: " + row[17] + "</p>";
@@ -3133,8 +3133,8 @@ function show_iq(message) {
                             "class": "td-product",
                             "data": function (row, type, set, meta) {
                                 if (type === "display") {
-                                    if (row[2] != '') var display = '<p style="margin: 10px 0 2px 0;">' + row[2] + '</p><div style="color:#999; font-size:10px"><img src="images/flags/' + row[9] + '.png" style="margin-right: 10px;">' + row[8];
-                                    else var display = '<p stule="margin: 10px 0 2px 0;"><span class="glyphicon glyphicon-time" style="cursor: default; margin-left: 0;"></span> Analyzing product. Won\'t be long!</p><div style="color:#999; font-size:10px"><img src="images/flags/' + row[9] + '.png" style="margin-right: 10px;">' + row[8];
+                                    if (row[2] != '') var display = '<p style="margin: 10px 0 2px 0;">' + row[2] + '</p><div style="color:#999; font-size:10px"><img src="assets/images/flags/' + row[9] + '.png" style="margin-right: 10px;">' + row[8];
+                                    else var display = '<p stule="margin: 10px 0 2px 0;"><span class="glyphicon glyphicon-time" style="cursor: default; margin-left: 0;"></span> Analyzing product. Won\'t be long!</p><div style="color:#999; font-size:10px"><img src="assets/images/flags/' + row[9] + '.png" style="margin-right: 10px;">' + row[8];
 
                                     if (row[7] != '') display += ' / ' + row[7];
 
@@ -3530,7 +3530,7 @@ function show_review_trader(message) {
 
                                     display += '<div style="color:#999; font-size:10px">';
                                     if (row[17] != '') display += '<span class="glyphicon glyphicon-exclamation-sign has-tooltip" title="WARNING: ' + row[17] + '" style="color: #F35958; font-size: 15px; top: 4px; margin: 0 10px 0 0;"></span>';
-                                    display += '<img src="images/flags/' + row[12] + '.png" style="margin-right: 10px;">' + row[14];
+                                    display += '<img src="assets/images/flags/' + row[12] + '.png" style="margin-right: 10px;">' + row[14];
 
                                     if (row[11] != '') display += ' / ' + row[11];
 
@@ -4826,7 +4826,7 @@ function show_redirection(message) {
                             "class": "td-product",
                             "data": function (row, type, set, meta) {
                                 if (type === "display") {
-                                    var display = '<p class="product_name_' + row[7] + '">' + row[1] + '</p><p class="asin"><img src="images/flags/' + row[10] + '.png" style="margin-right: 10px;">' + row[8];
+                                    var display = '<p class="product_name_' + row[7] + '">' + row[1] + '</p><p class="asin"><img src="assets/images/flags/' + row[10] + '.png" style="margin-right: 10px;">' + row[8];
 
                                     if (row[17] != "") display += " / <span class='has-tooltip' title='Merchant ID' data-placement='bottom'>" + row[17] + "</span>";
 
@@ -4978,7 +4978,7 @@ function show_advanced_super_url(message) {
                             "class": "td-product",
                             "data": function (row, type, set, meta) {
                                 if (type === "display") {
-                                    var display = '<p class="product_name_' + row[7] + '">' + row[1] + '</p><p class="asin"><img src="images/flags/' + row[10] + '.png" style="margin-right: 10px;">' + row[8];
+                                    var display = '<p class="product_name_' + row[7] + '">' + row[1] + '</p><p class="asin"><img src="assets/images/flags/' + row[10] + '.png" style="margin-right: 10px;">' + row[8];
 
                                     if (row[17] != "") display += " / <span class='has-tooltip' title='Merchant ID' data-placement='bottom'>" + row[17] + "</span>";
 
@@ -5219,7 +5219,7 @@ function show_review_trader_new(message) {
 
                                     display += '<div style="color:#999; font-size:10px">';
                                     if (row['error'] != '') display += '<span class="glyphicon glyphicon-exclamation-sign has-tooltip" title="WARNING: ' + row['error'] + '" style="color: #F35958; font-size: 15px; top: 4px; margin: 0 10px 0 0;"></span>';
-                                    display += '<img src="images/flags/' + row['flag'] + '.png" style="margin-right: 10px;">' + row['asin'];
+                                    display += '<img src="assets/images/flags/' + row['flag'] + '.png" style="margin-right: 10px;">' + row['asin'];
 
                                     if (row['tag'] != '') display += ' / ' + row['tag'];
 
@@ -5607,7 +5607,7 @@ function show_job_market(message) {
                                     if (row['job_title'] != '')display += ' <p> ' + row['job_title']+'</p>';
                                     display += '<div style="color:#999; font-size:10px">';
                                     if (row['error'] != '') display += '<span class="glyphicon glyphicon-exclamation-sign has-tooltip" title="WARNING: ' + row['error'] + '" style="color: #F35958; font-size: 15px; top: 4px; margin: 0 10px 0 0;"></span>';
-                                    if (row['asin'] != null)  display += '<img src="images/flags/' + row['flag'] + '.png" style="margin-right: 10px;">' + row['asin'] ;
+                                    if (row['asin'] != null)  display += '<img src="assets/images/flags/' + row['flag'] + '.png" style="margin-right: 10px;">' + row['asin'] ;
                                     if (row['asin'] != null&&Number(row['job_price'] )!= 0.00)display +=  ' / ';
                                     if (Number(row['job_price'] )!= 0.00) display +='<span style="color:green">'+'$' +row['job_price']+'</span>';
                                     if (row['job_application_nums'] != null && row['job_application_nums'] !=0 ){

@@ -5,74 +5,7 @@
     </head>
     
     <body>
-        <div class="top-fixed">
-            <select class="form-control tag-filter" onchange="update_filter(8)">
-                <option selected="selected">
-                    All Products
-                </option>
-            </select>
-            <select class="form-control graph-history table-main-menu" style="margin-left: 10px;">
-                <option value="weekly">
-                    Weekly graph history
-                </option>
-                <option value="monthly" selected="selected">
-                    Monthly graph history
-                </option>
-                <option value="yearly">
-                    Yearly graph history
-                </option>
-            </select>
-            <button type="button" class="btn btn-primary table-main-menu btn-add-product"
-            onclick="add_products('')">
-                <span class="glyphicon glyphicon-plus">
-                </span>
-                Add Product
-            </button>
-            <button type="button" class="btn btn-warning table-main-menu btn-keyword-research"
-            onclick="keyword_research(0)">
-                Keyword Research
-            </button>
-            <div class="bulk-menu" style="display:none">
-                <select class="form-control bulk-select" style="margin-left: 10px;" onchange="bulk_select()">
-                    <option value="" selected="selected">
-                        Select...
-                    </option>
-                    <option value="select-all">
-                        Select All
-                    </option>
-                    <option value="select-none">
-                        Select None
-                    </option>
-                    <option value="select-ranked">
-                        Select Ranked
-                    </option>
-                    <option value="select-non-ranking">
-                        Select Non-Ranking
-                    </option>
-                </select>
-                <button type="button" class="btn btn-default btn-bulk-cancel" onclick="bulk_cancel()">
-                    <span class="glyphicon glyphicon-remove">
-                    </span>
-                    Cancel
-                </button>
-                <button type="button" class="btn btn-danger btn-bulk-delete" onclick="bulk_delete_keywords()">
-                    <span class="glyphicon glyphicon-trash">
-                    </span>
-                    Delete Keywords
-                </button>
-                <button type="button" class="btn btn-success btn-bulk-export" onclick="bulk_export()">
-                    <span class="glyphicon glyphicon-list">
-                    </span>
-                    Export
-                </button>
-            </div>
-            <button type="button" class="btn btn-show-all-keywords" onclick="show_keywords_all()">
-                Show All Keywords
-            </button>
-            <button type="button" class="btn btn-hide-all-keywords" onclick="hide_keywords_all()">
-                Hide All Keywords
-            </button>
-        </div>
+        
         <div class="bottom">
             <table class="table table-hover table-main">
                 <thead>
